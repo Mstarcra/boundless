@@ -48,7 +48,10 @@ PUT：更新會員資訊、頭像。
   - [google登入](./server/routes/google-login.js)
   - [忘記密碼-發送OTP驗證碼](./server/routes/reset-password.js)
 
-  
+![image](https://github.com/Mstarcra/boundless/blob/main/sampleimg.png)
+
+
+
 
 
 

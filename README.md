@@ -5,7 +5,7 @@
 於資展國際學習時所製作之團隊專題，前端主要使用React.js撰寫(Next.js框架)，後端使用Node.js(express.js框架)。
 
 ## 測試說明
-此專題運用XAMPP軟體及MySQL來架設伺服器，資料庫檔案詳見sql檔，連結資料庫的詳細資料請看環境檔server/.env。
+此專題運用XAMPP軟體及MySQL來架設伺服器，資料庫詳見sql檔，連結資料庫的設定細節請看環境檔server/.env。
 
 前後端都使用了npm管理套件，執行前記得
 ```
@@ -23,7 +23,7 @@ npm run dev
 
 登入透過核發token來進行後續會員狀態認證，google登入認證部分採用firebase套件。
 
-## 細項
+## 製作細項
 前端（React.js）
 
 切版(含RWD)：登入／註冊、忘記密碼、會員中心（資訊、文章及訂單）、個人首頁。
@@ -45,7 +45,7 @@ PUT：更新會員資訊、頭像。
   - [全域hook(登入狀態)](./client/hooks/user)
 - 後端
   - [會員相關](./server/routes/user.js)
-  - [google登入](./server/routes/google-login.js)
+  - [Google登入](./server/routes/google-login.js)
   - [忘記密碼-發送OTP驗證碼](./server/routes/reset-password.js)
 
 ![image](https://github.com/Mstarcra/boundless/blob/main/sampleimg.png)

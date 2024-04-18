@@ -3,7 +3,7 @@
 於資展國際學習時所製作之團隊專題，前端主要使用React.js撰寫(Next.js框架)，後端使用Node.js(express.js框架)。
 
 ## 測試說明
-此專題運用XAMPP軟體及MySQL來架設伺服器，資料庫詳見sql檔，連結資料庫的設定細節請看環境檔server/.env。
+此專題運用XAMPP軟體及MySQL來架設伺服器，資料庫詳見sql檔，連結資料庫的設定細節請看環境檔server/.env，資料庫名稱為boundless_final。
 
 前後端都使用了npm管理套件，執行前記得使用終端機安裝相關套件
 ```

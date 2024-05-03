@@ -31,9 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Detect package manager
-        run: | 
-          woring-directory:./client
+      - name: Run script in client directory
+        working-directory: ./client
       - name: Detect package manager
         id: detect-package-manager
         run: |

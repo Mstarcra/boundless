@@ -31,7 +31,7 @@ let select = ()=>{
         value={select()}
         onChange={(e) => {
           //目前抓不到
-          console.log(e.target.getAttribute("cuid")); // 檢查是否能夠正確獲取到 data-cuid 的值
+          // console.log(e.target.getAttribute("cuid")); // 檢查是否能夠正確獲取到 data-cuid 的值
           let cuid = e.target.getAttribute("cuid");
           handleLessonSelector(e.target.value);
           handleLessonCUIDSelector(cuid);

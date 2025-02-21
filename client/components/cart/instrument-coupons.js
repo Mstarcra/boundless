@@ -35,10 +35,10 @@ let select = ()=>{
         defaultValue={0}
         value={select()}
         onChange={(e) => {
-          console.log(e.target.getAttribute("name"))
+          // console.log(e.target.getAttribute("name"))
           handleInstrumentSelector(e.target.value)
           //目前抓不到
-          console.log(e.target.getAttribute("cuid")); // 檢查是否能夠正確獲取到 data-cuid 的值
+          // console.log(e.target.getAttribute("cuid")); // 檢查是否能夠正確獲取到 data-cuid 的值
           let cuid = e.target.getAttribute("cuid");
           handleInstrumentCUIDSelector(cuid)
         }}

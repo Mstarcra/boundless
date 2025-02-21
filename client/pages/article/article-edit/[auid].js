@@ -42,7 +42,7 @@ export default function Auid() {
       const res = await fetch(`http://localhost:3005/api/article/${auid}`)
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()
-      console.log(data);
+      // console.log(data);
 
       // 設定到state中，觸發重新渲染(re-render)，會進入到update階段
       // 進入狀態前檢查資料類型有值，以避免錯誤
@@ -74,7 +74,7 @@ export default function Auid() {
   const [content, setContent] = useState('')
   const handleDescriptionChange = (newContent) => {
     setContent(newContent);
-    console.log(newContent)
+    // console.log(newContent)
   };
 
   const [auid, setAuid] = useState(null)
@@ -100,7 +100,7 @@ export default function Auid() {
     if (result.status === 'success') {
       notifySuccess(auid)
     } else {
-      console.log(result.error)
+      // console.log(result.error)
     }
   }
   // 發起成功後，彈出訊息框，並跳轉到資訊頁面

@@ -64,6 +64,7 @@ export default function Test() {
   useEffect(() => {
     document.addEventListener('click', (e) => {
       setFilterVisible(false)
+      localStorage.setItem('UserInfo', UserInfo)
     })
   }, [])
   // 阻止事件冒泡造成篩選表單關閉
@@ -80,7 +81,7 @@ export default function Test() {
     { Name: '', Phone: '', Email: '', Address: '' },
   ])
 
-  localStorage.setItem('UserInfo', UserInfo)
+  
 
   return (
     <>

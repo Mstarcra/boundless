@@ -242,7 +242,7 @@ export default function Test() {
 
   //-------------------------獲得該文章資料 code來自 article-list
   const getDatas = async (uid) => {
-    console.log(uid)
+    // console.log(uid)
     try {
       const res = await fetch(`http://localhost:3005/api/user/homepageArticle/${uid}`,
       {
@@ -255,7 +255,7 @@ export default function Test() {
       const datas = await res.json()
       if (datas) {
         setArticle(datas) // 設定獲取的文章數據到狀態中
-        console.log(datas)
+        // console.log(datas)
       }
     } catch (e) {
       console.error(e)

@@ -59,7 +59,7 @@ export function AuthProvider({ children }) {
       })
 
       const statusData = await response.json()
-      console.log('Response from server:', statusData)
+      // console.log('Response from server:', statusData)
 
       // console.log(userData)
 
@@ -99,10 +99,10 @@ export function AuthProvider({ children }) {
       })
 
       const LoginUserData = await response.json()
-      console.log('Response from server:', LoginUserData)
+      // console.log('Response from server:', LoginUserData)
 
       // setUserData(LoginUserData)
-      console.log(LoginUserData)
+      // console.log(LoginUserData)
 
       // 在這裡處理後端返回的資料
     } catch (error) {

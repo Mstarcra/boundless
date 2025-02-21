@@ -66,7 +66,7 @@ router.get('/sharing', async (req, res) => {
 
 router.get('/:auid', async (req, res, next) => {
   let auid = req.params.auid;
-  console.log(auid);
+  // console.log(auid);
   // 使用正确的参数名称
   let [data] = await db
     .execute(
@@ -78,7 +78,7 @@ router.get('/:auid', async (req, res, next) => {
     });
   if (data) {
     res.status(200).json(data);
-    console.log(data);
+    // console.log(data);
   } else {
     res.status(400).send('发生错误');
   }
@@ -89,23 +89,23 @@ router.post('/upload', upload.single('myFile'), async (req, res) => {
   let newCover = Date.now() + extname(req.file.originalname);
   rename(req.file.path, resolve(__dirname, 'public/article', newCover), (error) => {
     if (error) {
-      console.log("更名失敗" + error)
+      // console.log("更名失敗" + error)
       return;
     }
-    console.log('更名成功')
+    // console.log('更名成功')
   })
   const { title, content, category_id, user_id } = req.body;
-  console.log(req.body)
+  // console.log(req.body)
   const auid = generateUid();
   // const user_id = req.user.id;
-  console.log(user_id)
+  // console.log(user_id)
   await db
     .execute(
       'INSERT INTO `article` (`id`,`auid`, `title`, `content`, `category_id`, `img`, `user_id` ) VALUES (NULL, ?, ?, ?, ?, ?, ?)',
       [auid, title, content, parseInt(category_id), newCover, user_id]
     )
     .then(() => {
-      console.log('更新成功');
+      // console.log('更新成功');
 
       res.status(200).json({ status: 'success', auid });
     })
@@ -118,8 +118,8 @@ router.post('/upload', upload.single('myFile'), async (req, res) => {
 router.put('/edit/:auid', upload.none(''), async (req, res) => {
   const { content } = req.body;
   const auid = req.params.auid;
-  console.log(req.body)
-  console.log(req.params);
+  // console.log(req.body)
+  // console.log(req.params);
   await db
     .execute(
       'UPDATE `article` SET `content` = ? WHERE `auid` = ?',

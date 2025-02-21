@@ -38,8 +38,8 @@ const initApp = (callback) => {
 
         // The signed-in user info.
         const user = result.user
-        console.log(token)
-        console.log(user)
+        // console.log(token)
+        // console.log(user)
       }
     })
     .catch((error) => {
@@ -49,7 +49,7 @@ const initApp = (callback) => {
   // Listening for auth state changes.
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      console.log('user', user)
+      // console.log('user', user)
       // callback the user data
       callback(user.providerData[0])
     }
@@ -63,12 +63,12 @@ const logoutFirebase = () => {
   signOut(auth)
     .then(function () {
       // Sign-out successful.
-      console.log('Sign-out successful.')
+      // console.log('Sign-out successful.')
       // window.location.assign('https://accounts.google.com/logout')
     })
     .catch(function (error) {
       // An error happened.
-      console.log(error)
+      // console.log(error)
     })
 }
 
@@ -79,13 +79,13 @@ const loginGoogle = async (callback) => {
   signInWithPopup(auth, provider)
     .then(async (result) => {
       const user = result.user
-      console.log(user)
+      // console.log(user)
 
       // user後端寫入資料庫等等的操作
       callback(user.providerData[0])
     })
     .catch((error) => {
-      console.log(error)
+      // console.log(error)
     })
 }
 

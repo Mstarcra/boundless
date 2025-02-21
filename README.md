@@ -50,7 +50,6 @@ PUT：更新會員資訊、頭像。
 
 **免責聲明：本專案僅作資展國際期末專題發表，不得用於商業用途，若您的權利遭受侵害，敬請告知。**
 
-
-
+['透過Vercel部署呈現前端頁面'](https://boundless-9ayqr2ogw-nues-projects-455aa41b.vercel.app/)
 
 

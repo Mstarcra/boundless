@@ -57,11 +57,11 @@ export default function Test() {
   //   讀取使用者資料後 定義大頭貼路徑
   let avatarImage
   if (LoginUserData.img) {
-    avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
   } else if (LoginUserData.photo_url) {
     avatarImage = `${LoginUserData.photo_url}`
   } else {
-    avatarImage = `http://localhost:3005/user/avatar_userDefault.jpg`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/avatar_userDefault.jpg`
   }
   //-------------------------------------------------------------
   const appKey = 'userToken'
@@ -140,7 +140,7 @@ export default function Test() {
 
     try {
       const response = await fetch(
-        `http://localhost:3005/api/user/profile/${id}`,
+        `https://boundless-server-5xs0.onrender.com/api/user/profile/${id}`,
         {
           method: 'get',
           headers: {
@@ -335,7 +335,7 @@ export default function Test() {
     const userID = jwtDecode(Loginusertoken)
     const id = userID.id
     const res = await fetch(
-      `http://localhost:3005/api/user/editProfile/${id}`,
+      `https://boundless-server-5xs0.onrender.com/api/user/editProfile/${id}`,
       {
         method: 'POST',
         headers: {
@@ -660,7 +660,7 @@ export default function Test() {
                           </div>
                           <div>                          
                             <form
-                              action="http://localhost:3005/api/user/upload1"
+                              action="https://boundless-server-5xs0.onrender.com/api/user/upload1"
                               method="post"
                               encType="multipart/form-data"
                               className=""

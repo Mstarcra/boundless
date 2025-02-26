@@ -43,7 +43,7 @@ export default function Test() {
     e.preventDefault()
 
     if (user.password === user.passwordCheck) {
-      const res = await fetch('http://localhost:3005/api/user', {
+      const res = await fetch('https://boundless-server-5xs0.onrender.com/api/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export default function Test() {
   /*   Google Login(Firebase)登入用，providerData為登入後得到的資料  */
   const googleLogin = async (providerData = {}) => {
     try {
-      const response = await fetch('http://localhost:3005/api/google-login', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/google-login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

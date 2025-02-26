@@ -189,7 +189,7 @@ export default function Info() {
     formData.append('title', title)
     formData.append('condition', condition)
     formData.append('description', description)
-    const res = await fetch('http://localhost:3005/api/jam/updateForm', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/updateForm', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -223,7 +223,7 @@ export default function Info() {
   const getSingleData = async (juid) => {
     try {
       const res = await fetch(
-        `http://localhost:3005/api/jam/singleJam/${juid}/${LoginUserData.uid}`
+        `https://boundless-server-5xs0.onrender.com/api/jam/singleJam/${juid}/${LoginUserData.uid}`
       )
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()

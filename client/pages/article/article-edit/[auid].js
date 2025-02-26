@@ -39,7 +39,7 @@ export default function Auid() {
   const [articleDetail, setArticleDetail] = useState({})
   const getSingleDetail = async (auid) => {
     try {
-      const res = await fetch(`http://localhost:3005/api/article/${auid}`)
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/article/${auid}`)
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()
       // console.log(data);
@@ -91,7 +91,7 @@ export default function Auid() {
     let formData = new FormData()
     formData.append('content', content)
     // console.log(auid, content);
-    const res = await fetch(`http://localhost:3005/api/article/edit/${auid}`, {
+    const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/article/edit/${auid}`, {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -176,7 +176,7 @@ export default function Auid() {
               </div>
               <div className="main-img">
                 <Image
-                  src={`http://localhost:3005/article/${articleDetail.img}`}
+                  src={`https://boundless-server-5xs0.onrender.com/article/${articleDetail.img}`}
                   alt=""
                   className="big-pic object-fit-contain w-100"
                   responsive

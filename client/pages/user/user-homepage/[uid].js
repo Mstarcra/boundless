@@ -59,7 +59,7 @@ export default function Test() {
     console.log(uid)
   try {
     const response = await fetch(
-      `http://localhost:3005/api/user/user-homepage/${uid}`,
+      `https://boundless-server-5xs0.onrender.com/api/user/user-homepage/${uid}`,
       {
         method: 'get',
         headers: {
@@ -93,11 +93,11 @@ export default function Test() {
 
   let avatarImage
   if (userHomePageData.img) {
-    avatarImage = `http://localhost:3005/user/${userHomePageData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${userHomePageData.img}`
   } else if (userHomePageData.photo_url) {
     avatarImage = `${userHomePageData.photo_url}`
   } else {
-    avatarImage = `http://localhost:3005/user/avatar_userDefault.jpg`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/avatar_userDefault.jpg`
   }
 
 
@@ -244,7 +244,7 @@ export default function Test() {
   const getDatas = async (uid) => {
     // console.log(uid)
     try {
-      const res = await fetch(`http://localhost:3005/api/user/homepageArticle/${uid}`,
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/user/homepageArticle/${uid}`,
       {
         method: 'get',
         headers: {

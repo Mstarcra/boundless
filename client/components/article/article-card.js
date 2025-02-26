@@ -31,7 +31,7 @@ export default function Articlecard({
         >
           <img
             className="article-author"
-            src={`http://localhost:3005/user/${article_author_img}`}
+            src={`https://boundless-server-5xs0.onrender.com/user/${article_author_img}`}
             alt="空的圖"
           />
           <span className="info-p text-secondary">{article_author_name}</span>
@@ -46,7 +46,7 @@ export default function Articlecard({
               <h5 className="fw-bold clamped-text">{title}</h5>
               <p className="text-secondary">{content}</p>
             </div>
-            <img className="article-image" src={`http://localhost:3005/article/${img}`} alt="" />
+            <img className="article-image" src={`https://boundless-server-5xs0.onrender.com/article/${img}`} alt="" />
           </div>
         </Link>
         {/* views-like */}

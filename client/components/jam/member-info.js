@@ -13,7 +13,7 @@ export default function MemberInfo({ uid, name, nickname, img, play }) {
       <div className={`${styles.userPhotoWrapper}`}>
         {img ? (
           <Image
-            src={`http://localhost:3005/user/${img}`}
+            src={`https://boundless-server-5xs0.onrender.com/user/${img}`}
             alt={`${name}'s photo`}
             width={32}
             height={32}

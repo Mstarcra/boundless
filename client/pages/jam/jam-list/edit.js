@@ -141,7 +141,7 @@ export default function Edit() {
     formData.append('introduce', introduce)
     formData.append('cover_img', selectedFile)
     formData.append('works_link', yturl)
-    const res = await fetch('http://localhost:3005/api/jam/editInfo', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/editInfo', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -175,7 +175,7 @@ export default function Edit() {
   const getSingleData = async (juid) => {
     try {
       const res = await fetch(
-        `http://localhost:3005/api/jam/singleFormedJam/${juid}`
+        `https://boundless-server-5xs0.onrender.com/api/jam/singleFormedJam/${juid}`
       )
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()
@@ -290,7 +290,7 @@ export default function Edit() {
                     <>
                       {jam.cover_img ? (
                         <Image
-                          src={`http://localhost:3005/jam/${jam.cover_img}`}
+                          src={`https://boundless-server-5xs0.onrender.com/jam/${jam.cover_img}`}
                           fill
                           style={{ objectFit: 'cover' }}
                           alt={jam.cover_img}

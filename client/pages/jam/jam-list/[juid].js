@@ -80,7 +80,7 @@ export default function Info() {
     formData.append('id', LoginUserData.id)
     formData.append('juid', jam.juid)
     formData.append('playname', quitMemberPlay)
-    const res = await fetch('http://localhost:3005/api/jam/quit', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/quit', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -149,7 +149,7 @@ export default function Info() {
     let formData = new FormData()
     formData.append('ids', JSON.stringify(ids))
     formData.append('juid', jam.juid)
-    const res = await fetch('http://localhost:3005/api/jam/disband', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/disband', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -212,7 +212,7 @@ export default function Info() {
     try {
       const res = await fetch(
         // 加入uid是為了檢查該使用者是否有申請此樂團，以及其申請狀態
-        `http://localhost:3005/api/jam/singleFormedJam/${juid}`
+        `https://boundless-server-5xs0.onrender.com/api/jam/singleFormedJam/${juid}`
       )
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()
@@ -284,7 +284,7 @@ export default function Info() {
                 <div className={`${styles.coverWrapper}`}>
                   {jam.cover_img ? (
                     <Image
-                      src={`http://localhost:3005/jam/${jam.cover_img}`}
+                      src={`https://boundless-server-5xs0.onrender.com/jam/${jam.cover_img}`}
                       fill
                       style={{ objectFit: 'cover' }}
                       alt={jam.cover_img}

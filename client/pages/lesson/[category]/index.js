@@ -126,7 +126,7 @@ export default function LessonList({}) {
 
   function getLesson() {
     return new Promise((resolve, reject) => {
-      let url = 'http://localhost:3005/api/lesson'
+      let url = 'https://boundless-server-5xs0.onrender.com/api/lesson'
       fetch(url, {
         method: 'GET',
         credentials: 'include',
@@ -181,7 +181,7 @@ export default function LessonList({}) {
       console.log('priceLow:', priceLow)
       console.log('priceHigh:', priceHigh)
       fetch(
-        `http://localhost:3005/api/lesson?priceLow=${priceLow}&priceHigh=${priceHigh}`
+        `https://boundless-server-5xs0.onrender.com/api/lesson?priceLow=${priceLow}&priceHigh=${priceHigh}`
       )
         .then((response) => response.json()) //在網路請求成功時將回應物件轉換為 JSON 格式，並回傳一個新的 Promise 物件。這個新的 Promise 物件會在 JSON 解析成功後被解析，而且 data 參數會包含解析後的 JSON 資料。
 
@@ -294,7 +294,7 @@ export default function LessonList({}) {
 
   function getLessonCategory() {
     return new Promise((resolve, reject) => {
-      let url = 'http://localhost:3005/api/lesson/categories'
+      let url = 'https://boundless-server-5xs0.onrender.com/api/lesson/categories'
       fetch(url, {
         method: 'GET',
         credentials: 'include',
@@ -336,7 +336,7 @@ export default function LessonList({}) {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3005/api/lesson/category/${selectedCategory}`
+          `https://boundless-server-5xs0.onrender.com/api/lesson/category/${selectedCategory}`
         )
         const data = await response.json()
         console.log(data)

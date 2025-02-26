@@ -41,11 +41,11 @@ export default function Test() {
   //   讀取使用者資料後 定義大頭貼路徑
   let avatarImage
   if (LoginUserData.img) {
-    avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
   } else if (LoginUserData.photo_url) {
     avatarImage = `${LoginUserData.photo_url}`
   } else {
-    avatarImage = `http://localhost:3005/user/avatar_userDefault.jpg`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/avatar_userDefault.jpg`
   }
 
   // ----------------------會員登入狀態  ----------------------
@@ -74,7 +74,7 @@ export default function Test() {
 
     // console.log(uid)
     try {
-      const res = await fetch(`http://localhost:3005/api/user/MyArticle/${id}`,
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/user/MyArticle/${id}`,
       {
         method: 'get',
         headers: {

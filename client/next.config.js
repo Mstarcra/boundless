@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['via.placeholder.com', 'localhost', 'lh3.googleusercontent.com'],
+    domains: ['via.placeholder.com', 'localhost', 'lh3.googleusercontent.com', 'https://boundless-server-5xs0.onrender.com'],
   },
 
   // comment for render twice issue
@@ -11,7 +11,7 @@ const nextConfig = {
   //   return [
   //     {
   //       source: '/api/:path*',
-  //       destination: 'http://localhost:3005/:path*', // Proxy to Backend
+  //       destination: 'https://boundless-server-5xs0.onrender.com/:path*', // Proxy to Backend
   //     },
   //   ]
   // },

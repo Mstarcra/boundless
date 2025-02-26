@@ -36,7 +36,7 @@ export default function ForgetPassword() {
     
     
     try {
-      const response = await fetch('http://localhost:3005/api/reset-password/otp', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/reset-password/otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function ForgetPassword() {
 
 const resetPassword = async (email = '', password = '', token = '') => {
   try {
-    const response = await fetch('http://localhost:3005/api/reset-password/reset', {
+    const response = await fetch('https://boundless-server-5xs0.onrender.com/api/reset-password/reset', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

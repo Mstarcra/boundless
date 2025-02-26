@@ -8,7 +8,7 @@ function App() {
     // 定義一個函數用於獲取樂器資料
     const fetchInstruments = async () => {
       try {
-        const response = await fetch('http://localhost:3005/api/instruments')
+        const response = await fetch('https://boundless-server-5xs0.onrender.com/api/instruments')
         const data = await response.json()
         setInstruments(data)
       } catch (error) {

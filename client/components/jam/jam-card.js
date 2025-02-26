@@ -29,7 +29,7 @@ export default function JamCard({
         <div className={`${styles.coverWrapper}`}>
           {cover_img ? (
             <Image
-              src={`http://localhost:3005/jam/${cover_img}`}
+              src={`https://boundless-server-5xs0.onrender.com/jam/${cover_img}`}
               fill
               style={{ objectFit: 'cover' }}
               alt={cover_img}

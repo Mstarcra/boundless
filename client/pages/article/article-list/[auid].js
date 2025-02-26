@@ -45,7 +45,7 @@ export default function Auid() {
   //   讀取使用者資料後 定義大頭貼路徑
   let avatarImage
   if (LoginUserData.img) {
-    avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
   } else if (LoginUserData.photo_url) {
     avatarImage = `${LoginUserData.photo_url}`
   } else {
@@ -73,7 +73,7 @@ export default function Auid() {
   const [articleDetail, setArticleDetail] = useState({})
   const getSingleDetail = async (auid) => {
     try {
-      const res = await fetch(`http://localhost:3005/api/article/${auid}`)
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/article/${auid}`)
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()
 
@@ -189,7 +189,7 @@ export default function Auid() {
               <div className="newContent mb-3">{myContent}</div>
               <div className="main-img">
                 <Image
-                  src={`http://localhost:3005/article/${articleDetail.img}`}
+                  src={`https://boundless-server-5xs0.onrender.com/article/${articleDetail.img}`}
                   alt=""
                   className="big-pic object-fit-contain w-100"
                   responsive

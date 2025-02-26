@@ -286,7 +286,7 @@ export default function Info() {
     // for (let [key, value] of formData.entries()) {
     //   console.log(`${key}: ${value}`)
     // }
-    const res = await fetch('http://localhost:3005/api/jam/apply', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/apply', {
       method: 'POST',
       body: formData,
       credentials: 'include',
@@ -322,7 +322,7 @@ export default function Info() {
     let formData = new FormData()
     formData.append('id', id)
     formData.append('state', state)
-    const res = await fetch('http://localhost:3005/api/jam/decideApply', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/decideApply', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -342,7 +342,7 @@ export default function Info() {
   const formRightNow = async () => {
     let formData = new FormData()
     formData.append('juid', jam.juid)
-    const res = await fetch('http://localhost:3005/api/jam/formRightNow', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/formRightNow', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -416,7 +416,7 @@ export default function Info() {
     let formData = new FormData()
     formData.append('ids', JSON.stringify(ids))
     formData.append('juid', jam.juid)
-    const res = await fetch('http://localhost:3005/api/jam/disband', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/disband', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -485,7 +485,7 @@ export default function Info() {
     formData.append('id', LoginUserData.id)
     formData.append('juid', jam.juid)
     formData.append('playname', quitMemberPlay)
-    const res = await fetch('http://localhost:3005/api/jam/quit', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/quit', {
       method: 'PUT',
       body: formData,
       credentials: 'include',
@@ -548,7 +548,7 @@ export default function Info() {
     try {
       const res = await fetch(
         // 加入uid是為了檢查該使用者是否有申請此樂團，以及其申請狀態
-        `http://localhost:3005/api/jam/singleJam/${juid}/${LoginUserData.uid}`
+        `https://boundless-server-5xs0.onrender.com/api/jam/singleJam/${juid}/${LoginUserData.uid}`
       )
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()

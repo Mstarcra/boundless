@@ -80,7 +80,7 @@ export default function Apply({
           <div className={`${styles.userPhotoWrapper}`}>
             {applier.img ? (
               <Image
-                src={`http://localhost:3005/user/${applier.img}`}
+                src={`https://boundless-server-5xs0.onrender.com/user/${applier.img}`}
                 alt={`${applier.name}'s photo`}
                 width={32}
                 height={32}

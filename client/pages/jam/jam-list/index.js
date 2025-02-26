@@ -180,7 +180,7 @@ export default function JamList() {
 
     try {
       const res = await fetch(
-        `http://localhost:3005/api/jam/allFormedJam?${searchParams.toString()}`
+        `https://boundless-server-5xs0.onrender.com/api/jam/allFormedJam?${searchParams.toString()}`
       )
 
       // res.json()是解析res的body的json格式資料，得到JS的資料格式

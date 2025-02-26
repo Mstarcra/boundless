@@ -19,7 +19,7 @@ export default function Test() {
   // ----------------------測試用 獲得所有使用者清單 ----------------------
   const getUser = async () => {
     try {
-      const res = await fetch('http://localhost:3005/api/user')
+      const res = await fetch('https://boundless-server-5xs0.onrender.com/api/user')
 
       // 使用 res.json() 來解析 response 的 JSON 格式資料
       const usersData = await res.json()
@@ -84,7 +84,7 @@ export default function Test() {
     e.preventDefault()
 
     try {
-      const response = await fetch('http://localhost:3005/api/user/login', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export default function Test() {
     console.log(token)
     const usertoken = localStorage.getItem(appKey)
     try {
-      const response = await fetch('http://localhost:3005/api/user/status', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/status', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ export default function Test() {
    */
   const googleLogin = async (providerData = {}) => {
     try {
-      const response = await fetch('http://localhost:3005/api/google-login', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/google-login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

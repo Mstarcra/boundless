@@ -200,7 +200,7 @@ export default function Test({ onSearch }) {
 
     try {
       const res = await fetch(
-        `http://localhost:3005/api/instrument?${queryString}`
+        `https://boundless-server-5xs0.onrender.com/api/instrument?${queryString}`
       )
 
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
@@ -225,7 +225,7 @@ export default function Test({ onSearch }) {
   // const getDatassearch = async (params) => {
   //   try {
   //     const res = await fetch(
-  //       `http://localhost:3005/api/instrument/getDatassearch`
+  //       `https://boundless-server-5xs0.onrender.com/api/instrument/getDatassearch`
   //     )
 
   //     // res.json()是解析res的body的json格式資料，得到JS的資料格式
@@ -300,7 +300,7 @@ export default function Test({ onSearch }) {
   // }, [])
   // function getInstrument() {
   //   return new Promise((resolve, reject) => {
-  //     let url = 'http://localhost:3005/api/instrument'
+  //     let url = 'https://boundless-server-5xs0.onrender.com/api/instrument'
   //     fetch(url, {
   //       method: 'GET',
   //       credentials: 'include',
@@ -331,7 +331,7 @@ export default function Test({ onSearch }) {
   //     console.log('priceLow:', priceLow)
   //     console.log('priceHigh:', priceHigh)
   //     fetch(
-  //       `http://localhost:3005/api/instrument?priceLow=${priceLow}&priceHigh=${priceHigh}`
+  //       `https://boundless-server-5xs0.onrender.com/api/instrument?priceLow=${priceLow}&priceHigh=${priceHigh}`
   //     )
   //       .then((response) => response.json()) //在網路請求成功時將回應物件轉換為 JSON 格式，並回傳一個新的 Promise 物件。這個新的 Promise 物件會在 JSON 解析成功後被解析，而且 data 參數會包含解析後的 JSON 資料。
 
@@ -408,7 +408,7 @@ export default function Test({ onSearch }) {
 
   function getInstrumentCategory() {
     return new Promise((resolve, reject) => {
-      let url = 'http://localhost:3005/api/instrument/categories'
+      let url = 'https://boundless-server-5xs0.onrender.com/api/instrument/categories'
       fetch(url, {
         method: 'GET',
         credentials: 'include',
@@ -450,7 +450,7 @@ export default function Test({ onSearch }) {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3005/api/instrument/category/${selectedCategory}`
+          `https://boundless-server-5xs0.onrender.com/api/instrument/category/${selectedCategory}`
         )
         const data = await response.json()
         console.log(data)

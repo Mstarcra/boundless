@@ -42,11 +42,11 @@ export default function UserJam() {
   //   讀取使用者資料後 定義大頭貼路徑
   let avatarImage
   if (LoginUserData.img) {
-    avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
   } else if (LoginUserData.photo_url) {
     avatarImage = `${LoginUserData.photo_url}`
   } else {
-    avatarImage = `http://localhost:3005/user/avatar_userDefault.jpg`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/avatar_userDefault.jpg`
   }
 
   // ----------------------會員登入狀態  ----------------------
@@ -82,7 +82,7 @@ export default function UserJam() {
     formData.append('juid', juid)
     formData.append('applier_play', applier_play)
     try {
-      const res = await fetch(`http://localhost:3005/api/jam/joinJam`, {
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/jam/joinJam`, {
         method: 'PUT',
         body: formData,
         credentials: 'include',
@@ -157,7 +157,7 @@ export default function UserJam() {
     let formData = new FormData()
     formData.append('id', id)
     try {
-      const res = await fetch(`http://localhost:3005/api/jam/cancelApply`, {
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/jam/cancelApply`, {
         method: 'PUT',
         body: formData,
         credentials: 'include',
@@ -177,7 +177,7 @@ export default function UserJam() {
     let formData = new FormData()
     formData.append('id', id)
     try {
-      const res = await fetch(`http://localhost:3005/api/jam/deleteApply`, {
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/jam/deleteApply`, {
         method: 'PUT',
         body: formData,
         credentials: 'include',
@@ -196,7 +196,7 @@ export default function UserJam() {
   const getMyApply = async (uid) => {
     // console.log(uid)
     try {
-      const res = await fetch(`http://localhost:3005/api/jam/getMyApply/${uid}`)
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/jam/getMyApply/${uid}`)
       const datas = await res.json()
       if (datas.status === 'success') {
         setMyApply(datas.data)

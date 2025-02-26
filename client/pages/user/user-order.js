@@ -39,11 +39,11 @@ export default function Test() {
   //   讀取使用者資料後 定義大頭貼路徑
   let avatarImage
   if (LoginUserData.img) {
-    avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
   } else if (LoginUserData.photo_url) {
     avatarImage = `${LoginUserData.photo_url}`
   } else {
-    avatarImage = `http://localhost:3005/user/avatar_userDefault.jpg`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/avatar_userDefault.jpg`
   }
 
   let produceTestImage = `/instrument/上低音號/Jupiter_jbr700/jbr700_1.jpg`
@@ -68,7 +68,7 @@ export default function Test() {
 
     try {
       const response = await fetch(
-        `http://localhost:3005/api/user/order/${id}`,
+        `https://boundless-server-5xs0.onrender.com/api/user/order/${id}`,
         {
           method: 'post',
           headers: {

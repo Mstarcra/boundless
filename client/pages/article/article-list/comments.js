@@ -71,7 +71,7 @@ export default function ArticleList() {
   //   讀取使用者資料後 定義大頭貼路徑
   let avatarImage
   if (LoginUserData.img) {
-    avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+    avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
   } else if (LoginUserData.photo_url) {
     avatarImage = `${LoginUserData.photo_url}`
   } else {
@@ -88,7 +88,7 @@ export default function ArticleList() {
   useEffect(() => {
     const getDatas = async () => {
       try {
-        const res = await fetch(`http://localhost:3005/api/article/comments`)
+        const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/article/comments`)
         const datas = await res.json()
         if (datas) {
           setArticle(datas) // 設定獲取的文章數據到狀態中
@@ -105,7 +105,7 @@ export default function ArticleList() {
   // const [articleCategory, setArticleCategory] = useState([])
   // function getArticleCategory() {
   //   return new Promise((resolve, reject) => {
-  //     let url = 'http://localhost:3005/api/article/categories'
+  //     let url = 'https://boundless-server-5xs0.onrender.com/api/article/categories'
   //     fetch(url, {
   //       method: 'GET',
   //       credentials: 'include',

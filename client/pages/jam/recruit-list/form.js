@@ -171,7 +171,7 @@ export default function Form() {
     // for (let [key, value] of formData.entries()) {
     //   console.log(`${key}: ${value}`)
     // }
-    const res = await fetch('http://localhost:3005/api/jam/form', {
+    const res = await fetch('https://boundless-server-5xs0.onrender.com/api/jam/form', {
       method: 'POST',
       body: formData,
       credentials: 'include',

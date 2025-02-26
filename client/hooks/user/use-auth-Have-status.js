@@ -49,7 +49,7 @@ export function AuthProvider({ children }) {
     // 拿取Token回傳後端驗證狀態
     const usertoken = localStorage.getItem(appKey)
     try {
-      const response = await fetch('http://localhost:3005/api/user/status', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/status', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ export function AuthProvider({ children }) {
     const id = userID.id
 
     try {
-      const response = await fetch(`http://localhost:3005/api/user/${id}`, {
+      const response = await fetch(`https://boundless-server-5xs0.onrender.com/api/user/${id}`, {
         method: 'get',
         headers: {
           'Content-Type': 'application/json',

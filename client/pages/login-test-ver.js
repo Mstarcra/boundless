@@ -24,7 +24,7 @@ export default function Test() {
   //   // 假設這是一個登入的函數，後端返回了包含 token 的 response
   //   const handleLogin = async () => {
   //     try {
-  //       const response = await fetch('http://localhost:3005/api/user/login', {
+  //       const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/login', {
   //         method: 'POST',
   //         headers: {
   //           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ export default function Test() {
   // ----------------------測試用 獲得所有使用者清單 ----------------------
   const getUser = async () => {
     try {
-      const res = await fetch('http://localhost:3005/api/user')
+      const res = await fetch('https://boundless-server-5xs0.onrender.com/api/user')
 
       // 使用 res.json() 來解析 response 的 JSON 格式資料
       const usersData = await res.json()
@@ -135,7 +135,7 @@ export default function Test() {
     e.preventDefault()
 
     try {
-      const response = await fetch('http://localhost:3005/api/user/login', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -171,7 +171,7 @@ export default function Test() {
     console.log(token)
     const usertoken = token
     try {
-      const response = await fetch('http://localhost:3005/api/user/logout', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -207,7 +207,7 @@ export default function Test() {
     console.log(token)
     const usertoken = token
     try {
-      const response = await fetch('http://localhost:3005/api/user/status', {
+      const response = await fetch('https://boundless-server-5xs0.onrender.com/api/user/status', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

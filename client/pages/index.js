@@ -48,7 +48,7 @@ export default function Index() {
   const [carouselUseData, setCarouselUseData] = useState([])
   const getData = async () => {
     try {
-      const res = await fetch(`http://localhost:3005`)
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com`)
 
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const result = await res.json()

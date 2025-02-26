@@ -108,7 +108,7 @@ export default function InstrumentDetailPage() {
   // 向伺服器要求資料，設定到狀態中用的函式
   const getInstrumentDetail = async (puid) => {
     try {
-      const res = await fetch(`http://localhost:3005/api/instrument/${puid}`)
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/instrument/${puid}`)
 
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const datas = await res.json()
@@ -170,11 +170,11 @@ let nameimg
 
 // let avatarImage
 //   if (LoginUserData.img) {
-//     avatarImage = `http://localhost:3005/user/${LoginUserData.img}`
+//     avatarImage = `https://boundless-server-5xs0.onrender.com/user/${LoginUserData.img}`
 //   } else if (LoginUserData.photo_url) {
 //     avatarImage = `${LoginUserData.photo_url}`
 //   } else {
-//     avatarImage = `http://localhost:3005/user/avatar_userDefault.jpg`
+//     avatarImage = `https://boundless-server-5xs0.onrender.com/user/avatar_userDefault.jpg`
 //   }
   // console.log(quantity)
   return (
@@ -365,7 +365,7 @@ let nameimg
                                       <div className="userPhotoWrapper me-3">
                                         {v.img ? (
                                           <Image
-                                            src={`http://localhost:3005/user/${v.img}`}
+                                            src={`https://boundless-server-5xs0.onrender.com/user/${v.img}`}
                                             alt={`${v.name}'s photo`}
                                             width={32}
                                             height={32}

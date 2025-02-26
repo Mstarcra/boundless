@@ -77,7 +77,7 @@ export default function LessonDetailPage() {
   // 向伺服器要求資料，設定到狀態中用的函式
   const getLessonDetail = async (luid) => {
     try {
-      const res = await fetch(`http://localhost:3005/api/lesson/${luid}`)
+      const res = await fetch(`https://boundless-server-5xs0.onrender.com/api/lesson/${luid}`)
 
       // res.json()是解析res的body的json格式資料，得到JS的資料格式
       const data = await res.json()

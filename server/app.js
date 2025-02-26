@@ -27,7 +27,7 @@ app.set('view engine', 'ejs');
 
 // 設定允許互動的網域，讓port 3000  和 5500間可以互動
 const whitelist = [
-  'http://localhost:3005',
+  'https://boundless-server-5xs0.onrender.com',
   'http://localhost:3000',
   'http://localhost:3001',
   undefined,

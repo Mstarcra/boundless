@@ -12,16 +12,22 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
+    port: process.env.DB_PORT || 4000, // 預設 4000，TiDB Serverless 使用
     dialect: 'mysql',
     logging: false,
+    dialectOptions: {
+      ssl: {
+        ca: process.env.DB_SSL_CA, // 添加 CA 證書
+        rejectUnauthorized: true, // 強制驗證證書
+      },
+    },
     define: {
       freezeTableName: true,
       charset: 'utf8',
       collate: 'utf8_general_ci',
     },
   }
-)
+);
 // for postgresql test
 // const sequelize = new Sequelize(
 //   process.env.PG_DB_DATABASE,

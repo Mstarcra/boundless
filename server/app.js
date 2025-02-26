@@ -26,8 +26,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // 設定允許互動的網域，讓port 3000  和 5500間可以互動
-const whitelist = [
-  'https://boundless-server-5xs0.onrender.com',
+const whitelist = ['https://boundless-murex.vercel.app',
+  'http://localhost:3005',
   'http://localhost:3000',
   'http://localhost:3001',
   undefined,

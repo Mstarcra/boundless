@@ -1,11 +1,14 @@
 import { Sequelize } from 'sequelize'
-
 // 讀取.env檔用
 import 'dotenv/config.js'
-
 import applyModels from '#db-helpers/sequelize/models-setup.js'
 console.log(
-  process.env.DB_DATABASE
+  process.env.DB_DATABASE,
+  process.env.DB_DATABASE,
+  process.env.DB_USERNAME,
+  process.env.DB_PASSWORD,
+  process.env.DB_HOST,
+  process.env.DB_PORT
 )
 // 資料庫連結資訊
 const sequelize = new Sequelize(

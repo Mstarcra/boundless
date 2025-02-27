@@ -1,15 +1,10 @@
 import { Sequelize } from 'sequelize'
+
 // 讀取.env檔用
 import 'dotenv/config.js'
+
 import applyModels from '#db-helpers/sequelize/models-setup.js'
-console.log(
-  process.env.DB_DATABASE,
-  process.env.DB_DATABASE,
-  process.env.DB_USERNAME,
-  process.env.DB_PASSWORD,
-  process.env.DB_HOST,
-  process.env.DB_PORT
-)
+
 // 資料庫連結資訊
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -17,11 +12,14 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT, // 預設 4000，TiDB Serverless 使用
+    port: process.env.DB_PORT || 4000, // 預設 4000，TiDB Serverless 使用
     dialect: 'mysql',
     logging: false,
     dialectOptions: {
-      ssl: false,
+      ssl: {
+        ca: process.env.DB_SSL_CA, // 添加 CA 證書
+        rejectUnauthorized: true, // 強制驗證證書
+      },
     },
     define: {
       freezeTableName: true,

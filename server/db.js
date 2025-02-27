@@ -9,6 +9,10 @@ const db = await mysql.createPool({
   user: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
+  ssl: {
+    ca: process.env.DB_SSL_CA, // 修正為直接 ssl 配置
+    rejectUnauthorized: true,
+  },
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 10,

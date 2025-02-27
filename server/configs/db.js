@@ -15,6 +15,11 @@ const sequelize = new Sequelize(
     port: process.env.DB_PORT || 4000, // 預設 4000，TiDB Serverless 使用
     dialect: 'mysql',
     logging: false,
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false, 
+      },
+    },
     define: {
       freezeTableName: true,
       charset: 'utf8',

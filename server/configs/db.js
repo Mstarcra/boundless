@@ -4,7 +4,9 @@ import { Sequelize } from 'sequelize'
 import 'dotenv/config.js'
 
 import applyModels from '#db-helpers/sequelize/models-setup.js'
-
+console.log(
+  process.env.DB_DATABASE
+)
 // 資料庫連結資訊
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
@@ -12,14 +14,14 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT || 4000, // 預設 4000，TiDB Serverless 使用
+    port: process.env.DB_PORT, // 預設 4000，TiDB Serverless 使用
     dialect: 'mysql',
     logging: false,
-    dialectOptions: {
-      ssl: {
-        rejectUnauthorized: false, 
-      },
-    },
+    // dialectOptions: {
+    //   ssl: {
+    //     rejectUnauthorized: false, 
+    //   },
+    // },
     define: {
       freezeTableName: true,
       charset: 'utf8',

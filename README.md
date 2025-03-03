@@ -2,6 +2,15 @@
 
 於資展國際學習時所製作之團隊專題，前端主要使用React.js撰寫(Next.js框架)，後端使用Node.js(express.js框架)。
 
+## 2025/03/03 更新 透過免費的線上平台架站
+
+[boundless](https://boundless-murex.vercel.app/)
+
+此版本有刪除部分功能(課程)、Google登入(因為架設的網域並未加入名單)，後端Api因為render一段時間未使用會休眠，可能需要等待1到2分鐘專案重啟。
+
+應用的平台：前端-Vercel、後端-Render、資料庫-TiDB
+[架設小筆記](https://chiseled-snipe-631.notion.site/boundless-1a6afbf89e4e80348038cba2dadf71a4?pvs=73)
+
 ## 測試說明
 此專題運用XAMPP軟體及MySQL來架設伺服器，資料庫詳見sql檔，連結資料庫的設定細節請看環境檔server/.env，資料庫名稱為boundless_final。
 
@@ -50,6 +59,5 @@ PUT：更新會員資訊、頭像。
 
 **免責聲明：本專案僅作資展國際期末專題發表，不得用於商業用途，若您的權利遭受侵害，敬請告知。**
 
-[透過Vercel部署呈現前端頁面](https://boundless-303ii92d2-mstarcra-projects.vercel.app/)
 
 

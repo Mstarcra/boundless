@@ -6,10 +6,12 @@
 
 [boundless](https://boundless-murex.vercel.app/)
 
-此版本有刪除部分功能(課程)、Google登入(因為架設的網域並未加入名單)，後端Api因為render一段時間未使用會休眠，可能需要等待1到2分鐘專案重啟。
+此版本有刪除部分功能(課程、購物車結帳頁)、Google登入(因為架設的網域並未加入名單)，後端Api因為render一段時間未使用會休眠，可能需要等待1到2分鐘專案重啟。
 
 應用的平台：前端-Vercel、後端-Render、資料庫-TiDB
+
 [架設小筆記](https://chiseled-snipe-631.notion.site/boundless-1a6afbf89e4e80348038cba2dadf71a4?pvs=73)
+
 
 ## 測試說明
 此專題運用XAMPP軟體及MySQL來架設伺服器，資料庫詳見sql檔，連結資料庫的設定細節請看環境檔server/.env，資料庫名稱為boundless_final。
